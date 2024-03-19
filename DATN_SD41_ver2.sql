@@ -149,7 +149,7 @@ create table dep (
 	gia_ban decimal,
 	trang_thai int null,
 	gia_sau_khuyen_mai decimal,
-	ngay_nhap date,
+	ngay_nhap date null,
 	do_hot int null,
 	foreign key (id_chi_tiet_dep ) references chi_tiet_dep(id),
 	
@@ -245,3 +245,6 @@ drop table hoa_don_chi_tiet
 drop table dep
 drop table gio_hang
 drop table gio_hang_chi_tiet
+
+select * from dep
+select* from nhan_vien
