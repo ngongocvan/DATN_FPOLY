@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http:://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <body>
-$END$
+<form th:action="@{/san-pham/update/{id}(id=${sanpham.id})}" th:object="${sanpham}" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" name="id" th:value="${sanpham.id}" >
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">ma</label>
+        <input type="text" class="form-control" name="ma" th:field="*{ma}">
+
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">ho ten</label>
+        <input type="text" class="form-control" placeholder="" name="ten" th:value="${sanpham.ho_ten}" th:field="*{ten}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Mô tả</label>
+        <input type="text" class="form-control" placeholder="" name="mo_ta" th:value="${sanpham.mota}" th:field="*{mota}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">giá nhập</label>
+        <input type="text" class="form-control" placeholder="" name="gia_nhap" th:value="${sanpham.gia_nhap}" th:field="*{gia_nhap}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">giá bán</label>
+        <input type="text" class="form-control" placeholder="" name="gia_ban" th:value="${sanpham.gia_ban}" th:field="*{gia_ban}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">trạng thái</label>
+        <input type="text" class="form-control" placeholder="" name="trang_thai" th:value="${sanpham.trang_thai}" th:field="*{trang_thai}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Gía sau khuyến mãi</label>
+        <input type="text" class="form-control" placeholder="" name="gia_sau_khuyen_mai" th:value="${sanpham.gia_sau_khuyen_mai}" th:field="*{gia_sau_khuyen_mai}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Ngày nhập</label>
+        <input type="date" class="form-control" placeholder="" name="ngay_nhap" th:value="${sanpham.ngay_nhap}" th:field="*{ngay_nhap}">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Độ hót</label>
+        <input type="text" class="form-control" placeholder="" name="do_hot" th:value="${sanpham.do_hot}" th:field="*{do_hot}">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">update</button>
+    </div>
+</form>
 </body>
 </html>
