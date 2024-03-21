@@ -24,7 +24,7 @@ public class SanPham {
     private Integer gia_nhap;
     private Integer gia_ban;
     private Integer trang_thai;
-    private String gia_sau_khuyen_mai;
+    private Integer gia_sau_khuyen_mai;
     private Date ngay_nhap;
     private Integer do_hot;
 }
