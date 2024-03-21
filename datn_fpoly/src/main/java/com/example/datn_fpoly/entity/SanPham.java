@@ -21,8 +21,8 @@ public class SanPham {
     private String ma;
     private String ten;
     private String mota;
-    private String gia_nhap;
-    private String gia_ban;
+    private Integer gia_nhap;
+    private Integer gia_ban;
     private Integer trang_thai;
     private String gia_sau_khuyen_mai;
     private Date ngay_nhap;
